@@ -19,6 +19,7 @@ ext {
     gsonVer = "2.8.0"
     retrofitVer = "2.3.0"
     retrofitConverterGsonVer = "2.3.0"
+    retrofitCallAdapterVer = "2.2.0"
     constraintLayoutVer = "1.0.2"
 
     rxAndroidVer = "2.0.1"

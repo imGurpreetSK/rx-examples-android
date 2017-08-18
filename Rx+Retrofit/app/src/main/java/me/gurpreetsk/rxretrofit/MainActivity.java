@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onNext(@NonNull Response<GithubResults> githubResultsResponse) {
                         Log.d(TAG, "onNext: code: " + githubResultsResponse.code());
                         if (githubResultsResponse.code() == 200) {
-                            Log.i(TAG, "onNext: "+githubResultsResponse.body().getItems());
+                            Log.i(TAG, "onNext: " + githubResultsResponse.body().getItems().size());
                         } else {
                             Log.e(TAG, "onNext: error: " + githubResultsResponse.errorBody().toString());
                         }
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,
                                 e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         Log.e(TAG, "onError: ", e);
-                        if (!d.isDisposed())
+                        if (!d.isDisposed())    //dispose the resource if not done already
                             d.dispose();
                     }
 
