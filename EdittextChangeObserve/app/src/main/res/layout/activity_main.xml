@@ -8,9 +8,16 @@
     android:orientation="vertical"
     tools:context="me.gurpreetsk.textchangeobserve.MainActivity">
 
-    <ProgressBar
+    <EditText
+        android:id="@+id/edittext_query"
         android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="8dp"
+        android:hint="@string/enter_query"/>
+
+    <ProgressBar
         android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <android.support.v7.widget.RecyclerView

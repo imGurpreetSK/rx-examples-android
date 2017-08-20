@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Rx+Retrofit</string>
+    <string name="app_name">Text Change Observe</string>
+    <string name="enter_query">Search person</string>
 </resources>
