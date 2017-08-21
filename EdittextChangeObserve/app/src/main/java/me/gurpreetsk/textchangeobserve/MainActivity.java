@@ -57,15 +57,17 @@ public class MainActivity extends AppCompatActivity {
         DividerItemDecoration.VERTICAL));
 
     apiService = ApiClient.getClient().create(ApiInterface.class);
-
   }
 
   @Override
   protected void onStart() {
     super.onStart();
-    getResults(getTextObservable());
+    getResults();
   }
 
+  /**
+   * @return Observable of query items entered in the edittext
+   */
   private Observable<String> getTextObservable() {
 
     final Observable<String> textObservable = Observable.create(new ObservableOnSubscribe<String>() {
@@ -100,13 +102,16 @@ public class MainActivity extends AppCompatActivity {
         //onNext to be called only of this returns true
         return s.length() > 2;
       }
-    }).debounce(500, TimeUnit.MILLISECONDS);  //lossy searching
+    }).debounce(500, TimeUnit.MILLISECONDS);  //lossy searching: See marble diagram
 
   }
 
-  private void getResults(Observable<String> observable) {
+  /**
+   * get results from the API
+   */
+  private void getResults() {
 
-    observable.subscribeOn(Schedulers.io())
+    getTextObservable().subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .doOnNext(new Consumer<String>() {  //do this every time a new item is emitted
           @Override
