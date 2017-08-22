@@ -11,7 +11,7 @@ ext {
     junitVer = "4.12"
     espressoVer = "2.2.2"
 
-    butterknifeVer = "8.5.1"
+    butterknifeVer = "8.8.1"
     daggerVer = "2.10"
     jsr250apiVer = "1.0"
     okhttpVer = "3.7.0"
