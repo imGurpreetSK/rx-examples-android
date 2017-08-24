@@ -14,9 +14,9 @@ for various common problems faced by android developers.</h3>
 
 ## Contents
 
-1. [Substitute Asynctask](https://github.com/GurpreetSK95/rx-examples-android/tree/master/SubstituteAsynctask) ([![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/SubstituteAsynctask))
-2. [Using RxJava with Retrofit](https://github.com/GurpreetSK95/rx-examples-android/tree/master/Rx%2BRetrofit) ([![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/Rx%2BRetrofit))
-3. [Observe Text Changes](https://github.com/GurpreetSK95/rx-examples-android/tree/master/EdittextChangeObserve) ([![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/EdittextChangeObserve))
+1. [Substitute Asynctask](https://github.com/GurpreetSK95/rx-examples-android/tree/master/SubstituteAsynctask) ([![download](images/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/SubstituteAsynctask))
+2. [Using RxJava with Retrofit](https://github.com/GurpreetSK95/rx-examples-android/tree/master/Rx%2BRetrofit) ([![download](images/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/Rx%2BRetrofit))
+3. [Observe Text Changes](https://github.com/GurpreetSK95/rx-examples-android/tree/master/EdittextChangeObserve) ([![download](images/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/EdittextChangeObserve))
 
 
 ## Attributions
