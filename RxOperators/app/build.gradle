@@ -38,9 +38,11 @@ dependencies {
     compile "com.google.code.gson:gson:$gsonVer"
     compile "com.squareup.retrofit2:retrofit:$retrofitVer"
     compile "com.squareup.retrofit2:converter-gson:$retrofitVer"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitCallAdapterVer"
 
     //butterknife
     compile "com.jakewharton:butterknife:$butterknifeVer"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
 
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

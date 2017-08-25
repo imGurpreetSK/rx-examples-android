@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RxOperators</string>
+    <string name="map_operator">Map operator</string>
+    <string name="flatmap_operator">Flatmap operator</string>
 </resources>
