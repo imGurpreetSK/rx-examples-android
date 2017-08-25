@@ -18,13 +18,12 @@ for various common problems faced by android developers.</h3>
 2. [Using RxJava with Retrofit](https://github.com/GurpreetSK95/rx-examples-android/tree/master/Rx%2BRetrofit) ([![download](images/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/Rx%2BRetrofit))
 3. [Observe Text Changes](https://github.com/GurpreetSK95/rx-examples-android/tree/master/EdittextChangeObserve) ([![download](images/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/GurpreetSK95/rx-examples-android/tree/master/EdittextChangeObserve))
 
-
 ## Attributions
 
-Thanks to [Nisrulz](https://github.com/nisrulz/android-examples) for great work on [Android Examples]((https://github.com/nisrulz/android-examples) and
+Thanks to [Nisrulz](https://github.com/nisrulz/android-examples) for great work on [Android Examples](https://github.com/nisrulz/android-examples) and
 for providing a way for developers to learn and get into Open Source.
 
-This project is a direct implementation of his views expressed [here](https://android.jlelse.eu/want-to-step-up-your-android-learning-game-you-need-to-read-this-first-e0cb9a7816a3)
+This project is a direct implementation of his views expressed [here](https://android.jlelse.eu/want-to-step-up-your-android-learning-game-you-need-to-read-this-first-e0cb9a7816a3).
 
 # Pull Requests
 All pull requests and feedback is welcome. It usually will take me within 24-48 hours to
