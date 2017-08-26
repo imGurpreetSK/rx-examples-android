@@ -16,6 +16,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import me.gurpreetsk.rxoperators.R;
+import me.gurpreetsk.rxoperators.util.SeeLink;
 
 public class FlatmapActivity extends AppCompatActivity {
 
@@ -36,12 +37,16 @@ public class FlatmapActivity extends AppCompatActivity {
   @Override
   protected void onStart() {
     super.onStart();
+    exampleWork();
+  }
+
+  @SeeLink(link = "https://stackoverflow.com/questions/22847105/when-do-you-use-map-vs-flatmap-in-rxjava")
+  private void exampleWork() {
     disposable = Observable.just(2, 4, 6, 8, 10)
         .subscribeOn(Schedulers.io())
         .observeOn(Schedulers.io())
-        // the flatmap operator does some processing on each element passed by the observable to it
+        // the FlatMap operator does some processing on each element passed by the observable to it
         // and returns an *observable* for each element
-        //(see https://stackoverflow.com/questions/22847105/when-do-you-use-map-vs-flatmap-in-rxjava)
         .flatMap(new Function<Integer, ObservableSource<Integer>>() {
           @Override
           public ObservableSource<Integer> apply(@NonNull Integer integer) throws Exception {
