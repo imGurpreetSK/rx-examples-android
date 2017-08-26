@@ -11,27 +11,20 @@
     tools:context="me.gurpreetsk.rxoperators.ui.MainActivity">
 
     <Button
-        android:id="@+id/button_transformation"
+        android:id="@+id/button_map_operator"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:text="@string/map_operator"/>
 
     <Button
-        android:id="@+id/button_mathematical"
+        android:id="@+id/button_flatmap_operator"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:text="@string/flatmap_operator"/>
 
-    <Button
-        android:id="@+id/button_filtering"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:text="@string/map_operator"/>
-
-    <Button
-        android:id="@+id/button_combinational"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:text="@string/flatmap_operator"/>
+    <!--<Button-->
+    <!--android:id="@+id/button_map_operator"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?actionBarSize"/>-->
 
 </LinearLayout>

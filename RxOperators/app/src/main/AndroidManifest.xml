@@ -20,6 +20,14 @@
         </activity>
         <activity android:name=".ui.transformation.FlatmapActivity">
         </activity>
+        <activity android:name=".ui.transformation.TransformationOperatorsActivity">
+        </activity>
+        <activity android:name=".ui.combination.CombinationalOperatorsActivity">
+        </activity>
+        <activity android:name=".ui.filtering.FilteringOperatorsActivity">
+        </activity>
+        <activity android:name=".ui.mathematical.MathematicalOperatorsActivity">
+        </activity>
     </application>
 
 </manifest>

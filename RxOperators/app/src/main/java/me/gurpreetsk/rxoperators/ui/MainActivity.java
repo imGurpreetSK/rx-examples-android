@@ -7,8 +7,11 @@ import android.os.Bundle;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.gurpreetsk.rxoperators.R;
+import me.gurpreetsk.rxoperators.ui.combination.CombinationalOperatorsActivity;
+import me.gurpreetsk.rxoperators.ui.filtering.FilteringOperatorsActivity;
+import me.gurpreetsk.rxoperators.ui.mathematical.MathematicalOperatorsActivity;
 import me.gurpreetsk.rxoperators.ui.transformation.FlatmapActivity;
-import me.gurpreetsk.rxoperators.ui.transformation.MapActivity;
+import me.gurpreetsk.rxoperators.ui.transformation.TransformationOperatorsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,14 +24,24 @@ public class MainActivity extends AppCompatActivity {
     ButterKnife.bind(this);
   }
 
-  @OnClick(R.id.button_map_operator)
-  public void openMapActivity() {
-    startActivity(new Intent(MainActivity.this, MapActivity.class));
+  @OnClick(R.id.button_transformation)
+  public void openTransformationActivity() {
+    startActivity(new Intent(MainActivity.this, TransformationOperatorsActivity.class));
   }
 
-  @OnClick(R.id.button_flatmap_operator)
-  public void openFlatmapActivity() {
-    startActivity(new Intent(MainActivity.this, FlatmapActivity.class));
+  @OnClick(R.id.button_combinational)
+  public void openCombinationalActivity() {
+    startActivity(new Intent(MainActivity.this, CombinationalOperatorsActivity.class));
+  }
+
+  @OnClick(R.id.button_filtering)
+  public void openFilteringActivity() {
+    startActivity(new Intent(MainActivity.this, FilteringOperatorsActivity.class));
+  }
+
+  @OnClick(R.id.button_mathematical)
+  public void openMathematicalActivity() {
+    startActivity(new Intent(MainActivity.this, MathematicalOperatorsActivity.class));
   }
 
 }

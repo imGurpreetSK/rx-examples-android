@@ -23,8 +23,6 @@ public class MapActivity extends AppCompatActivity {
   @BindView(R.id.textview_map)
   TextView textviewMap;
 
-  ApiInterface apiService;
-
   Disposable disposable;
 
   private static final String TAG = MapActivity.class.getSimpleName();
