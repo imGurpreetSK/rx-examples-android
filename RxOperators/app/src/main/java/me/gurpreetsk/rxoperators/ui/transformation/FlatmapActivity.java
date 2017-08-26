@@ -40,7 +40,7 @@ public class FlatmapActivity extends AppCompatActivity {
     exampleWork();
   }
 
-  @SeeLink(link = "https://stackoverflow.com/questions/22847105/when-do-you-use-map-vs-flatmap-in-rxjava")
+  @SeeLink(links = {"https://stackoverflow.com/questions/22847105/when-do-you-use-map-vs-flatmap-in-rxjava"})
   private void exampleWork() {
     disposable = Observable.just(2, 4, 6, 8, 10)
         .subscribeOn(Schedulers.io())
