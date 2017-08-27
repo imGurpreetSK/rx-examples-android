@@ -26,6 +26,7 @@ dependencies {
     })
     testCompile "junit:junit:$junitVer"
 
+    //android support
     compile "com.android.support:appcompat-v7:$supportLibVer"
     compile "com.android.support:recyclerview-v7:$supportLibVer"
 
