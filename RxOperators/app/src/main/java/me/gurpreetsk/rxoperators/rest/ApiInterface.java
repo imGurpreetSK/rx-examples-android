@@ -2,8 +2,10 @@ package me.gurpreetsk.rxoperators.rest;
 
 import io.reactivex.Observable;
 import me.gurpreetsk.rxoperators.model.GithubResults;
+import me.gurpreetsk.rxoperators.model.RepoList;
 import retrofit2.Response;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -14,5 +16,8 @@ public interface ApiInterface {
 
   @GET("/search/repositories")
   Observable<Response<GithubResults>> getGithubRepos(@Query("q") String query);
+
+  @GET("/users/{username}/repos")
+  Observable<Response<RepoList>> getUserRepos(@Path("username") String username);
 
 }

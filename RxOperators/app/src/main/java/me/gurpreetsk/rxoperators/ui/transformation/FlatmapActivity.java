@@ -1,8 +1,7 @@
 package me.gurpreetsk.rxoperators.ui.transformation;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -16,6 +15,8 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import me.gurpreetsk.rxoperators.R;
+import me.gurpreetsk.rxoperators.rest.ApiClient;
+import me.gurpreetsk.rxoperators.rest.ApiInterface;
 import me.gurpreetsk.rxoperators.util.SeeLink;
 
 public class FlatmapActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class FlatmapActivity extends AppCompatActivity {
   TextView textviewFlatmap;
 
   Disposable disposable;
+  ApiInterface apiService;
 
   private static final String TAG = MapActivity.class.getSimpleName();
 
@@ -32,6 +34,11 @@ public class FlatmapActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_flatmap);
     ButterKnife.bind(this);
+    setTitle(TAG);
+
+    apiService =
+        ApiClient.getClient().create(ApiInterface.class);
+
   }
 
   @Override
@@ -50,15 +57,15 @@ public class FlatmapActivity extends AppCompatActivity {
         .flatMap(new Function<Integer, ObservableSource<Integer>>() {
           @Override
           public ObservableSource<Integer> apply(@NonNull Integer integer) throws Exception {
-            return Observable.just(1, 2, 3);
+            return Observable.just((int) Math.pow(integer, 2), (int) Math.pow(integer, 3));
           }
         })
+//        .take(2)
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Consumer<Integer>() {
           @Override
           public void accept(Integer integer) throws Exception {
-            Log.i(TAG, "accept: " + integer);
-            textviewFlatmap.setText(textviewFlatmap.getText() + " " + integer);
+            textviewFlatmap.setText(textviewFlatmap.getText() + "\n" + integer);
           }
         });
   }

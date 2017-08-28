@@ -2,4 +2,9 @@
     <string name="app_name">RxOperators</string>
     <string name="map_operator">Map operator</string>
     <string name="flatmap_operator">Flatmap operator</string>
+    <string name="combinational_operator">Combinational</string>
+    <string name="filtering_operators">Filtering</string>
+    <string name="mathematical_operators">Mathematical</string>
+    <string name="transformational_operators">Transformational</string>
+    <string name="types_of_operators">Types of Operators</string>
 </resources>

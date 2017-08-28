@@ -7,9 +7,12 @@ import me.gurpreetsk.rxoperators.R;
 
 public class MathematicalOperatorsActivity extends AppCompatActivity {
 
+  private static final String TAG = MathematicalOperatorsActivity.class.getSimpleName();
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_mathematical_operators);
+    setTitle(TAG);
   }
 }

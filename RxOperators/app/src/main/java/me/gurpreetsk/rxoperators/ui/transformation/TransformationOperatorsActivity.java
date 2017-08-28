@@ -10,11 +10,14 @@ import me.gurpreetsk.rxoperators.R;
 
 public class TransformationOperatorsActivity extends AppCompatActivity {
 
+  private static final String TAG = TransformationOperatorsActivity.class.getSimpleName();
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_transformation_operators);
     ButterKnife.bind(this);
+    setTitle(TAG);
   }
 
   @OnClick(R.id.button_map_operator)

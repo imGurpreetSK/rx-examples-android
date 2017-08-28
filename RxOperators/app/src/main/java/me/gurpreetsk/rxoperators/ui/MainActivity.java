@@ -1,8 +1,8 @@
 package me.gurpreetsk.rxoperators.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -10,7 +10,6 @@ import me.gurpreetsk.rxoperators.R;
 import me.gurpreetsk.rxoperators.ui.combination.CombinationalOperatorsActivity;
 import me.gurpreetsk.rxoperators.ui.filtering.FilteringOperatorsActivity;
 import me.gurpreetsk.rxoperators.ui.mathematical.MathematicalOperatorsActivity;
-import me.gurpreetsk.rxoperators.ui.transformation.FlatmapActivity;
 import me.gurpreetsk.rxoperators.ui.transformation.TransformationOperatorsActivity;
 
 public class MainActivity extends AppCompatActivity {

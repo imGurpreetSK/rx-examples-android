@@ -1,13 +1,12 @@
 package me.gurpreetsk.rxoperators.ui.transformation;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.Observable;
-import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
@@ -15,8 +14,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import me.gurpreetsk.rxoperators.R;
-import me.gurpreetsk.rxoperators.rest.ApiClient;
-import me.gurpreetsk.rxoperators.rest.ApiInterface;
 
 public class MapActivity extends AppCompatActivity {
 
@@ -33,6 +30,7 @@ public class MapActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_map);
     ButterKnife.bind(this);
+    setTitle(TAG);
   }
 
   @Override
