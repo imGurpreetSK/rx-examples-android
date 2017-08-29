@@ -52,6 +52,11 @@ public class FlatmapActivity extends AppCompatActivity {
     exampleWork();
   }
 
+  /**
+   * Here we're trying to request some data first, and then request some meta data
+   * The challenge is to use only ONE subscribe call
+   * This can be done with flatmap operator
+   */
   @SeeLink(links = {"https://stackoverflow.com/questions/22847105/when-do-you-use-map-vs-flatmap-in-rxjava"})
   private void exampleWork() {
     apiService.getGithubRepos("rxjava")
@@ -72,7 +77,8 @@ public class FlatmapActivity extends AppCompatActivity {
           }
         })
         .observeOn(AndroidSchedulers.mainThread())
-        .take(5)
+        //take only first 10 users
+        .take(10)
         .subscribe(new Observer<GithubUser>() {
           @Override
           public void onSubscribe(@NonNull Disposable d) {
