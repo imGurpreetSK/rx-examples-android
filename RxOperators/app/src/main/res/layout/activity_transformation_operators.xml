@@ -22,9 +22,16 @@
         android:layout_height="?actionBarSize"
         android:text="@string/flatmap_operator"/>
 
+    <Button
+        android:id="@+id/button_buffer_operator"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="@string/buffer_operator"/>
+
     <!--<Button-->
-    <!--android:id="@+id/button_map_operator"-->
+    <!--android:id="@+id/button_buffer_operator"-->
     <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="?actionBarSize"/>-->
+    <!--android:layout_height="?actionBarSize"-->
+    <!--android:text="@string/buffer_operator"/>-->
 
 </LinearLayout>

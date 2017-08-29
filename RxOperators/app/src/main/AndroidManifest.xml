@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".ui.mathematical.MathematicalOperatorsActivity">
         </activity>
+        <activity android:name=".ui.transformation.BufferActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -44,5 +44,5 @@ dependencies {
     compile "com.jakewharton:butterknife:$butterknifeVer"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

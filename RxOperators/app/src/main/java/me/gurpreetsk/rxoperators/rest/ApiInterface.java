@@ -1,8 +1,8 @@
 package me.gurpreetsk.rxoperators.rest;
 
 import io.reactivex.Observable;
-import me.gurpreetsk.rxoperators.model.GithubResults;
-import me.gurpreetsk.rxoperators.model.GithubUser;
+import me.gurpreetsk.rxoperators.model.github.GithubResults;
+import me.gurpreetsk.rxoperators.model.github.GithubUser;
 import retrofit2.Response;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

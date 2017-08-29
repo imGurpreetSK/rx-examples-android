@@ -7,4 +7,5 @@
     <string name="mathematical_operators">Mathematical</string>
     <string name="transformational_operators">Transformational</string>
     <string name="types_of_operators">Types of Operators</string>
+    <string name="buffer_operator">Buffer Operator</string>
 </resources>

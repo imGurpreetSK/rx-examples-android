@@ -1,4 +1,4 @@
-package me.gurpreetsk.rxoperators.model;
+package me.gurpreetsk.rxoperators.model.github;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

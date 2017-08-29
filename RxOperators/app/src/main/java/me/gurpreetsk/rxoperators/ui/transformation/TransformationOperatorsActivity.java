@@ -30,4 +30,9 @@ public class TransformationOperatorsActivity extends AppCompatActivity {
     startActivity(new Intent(TransformationOperatorsActivity.this, FlatmapActivity.class));
   }
 
+  @OnClick(R.id.button_buffer_operator)
+  public void openBufferActivity() {
+    startActivity(new Intent(TransformationOperatorsActivity.this, BufferActivity.class));
+  }
+
 }
