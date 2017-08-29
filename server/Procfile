@@ -1,2 +1,2 @@
 heroku ps:scale web=1
-web: gunicorn PropertyBot:app --log-file -
+web: gunicorn rx-example-android:app --log-file -
