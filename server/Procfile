@@ -1,2 +1,2 @@
 heroku ps:scale web=1
-web: gunicorn rx-example-android:app --log-file -
+web: gunicorn server:app --log-file -
