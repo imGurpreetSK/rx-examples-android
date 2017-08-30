@@ -79,10 +79,13 @@ public class FlatmapActivity extends AppCompatActivity {
         .observeOn(AndroidSchedulers.mainThread())
         //take only first 10 users
         .take(10)
+        .retry(5)
         .subscribe(new Observer<GithubUser>() {
+          Disposable d;
+
           @Override
           public void onSubscribe(@NonNull Disposable d) {
-
+            this.d = d;
           }
 
           @Override
@@ -99,7 +102,8 @@ public class FlatmapActivity extends AppCompatActivity {
 
           @Override
           public void onComplete() {
-
+            if (!d.isDisposed())
+              d.dispose();
           }
         });
   }
