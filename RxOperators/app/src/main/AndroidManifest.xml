@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".ui.transformation.BufferActivity">
         </activity>
+        <activity android:name=".ui.transformation.WindowActivity">
+        </activity>
     </application>
 
 </manifest>
