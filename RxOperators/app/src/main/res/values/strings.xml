@@ -9,4 +9,5 @@
     <string name="types_of_operators">Types of Operators</string>
     <string name="buffer_operator">Buffer Operator</string>
     <string name="see_logs">See Android monitor info logs</string>
+    <string name="window_operator">Window Operator</string>
 </resources>

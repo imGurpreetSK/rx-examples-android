@@ -28,10 +28,10 @@
         android:layout_height="?actionBarSize"
         android:text="@string/buffer_operator"/>
 
-    <!--<Button-->
-    <!--android:id="@+id/button_buffer_operator"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="?actionBarSize"-->
-    <!--android:text="@string/buffer_operator"/>-->
+    <Button
+        android:id="@+id/button_window_operator"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="@string/window_operator"/>
 
 </LinearLayout>

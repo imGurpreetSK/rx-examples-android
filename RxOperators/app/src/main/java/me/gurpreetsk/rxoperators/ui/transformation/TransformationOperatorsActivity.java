@@ -37,4 +37,9 @@ public class TransformationOperatorsActivity extends AppCompatActivity {
     startActivity(new Intent(TransformationOperatorsActivity.this, BufferActivity.class));
   }
 
+  @OnClick(R.id.button_window_operator)
+  public void openWindowActivity() {
+    startActivity(new Intent(TransformationOperatorsActivity.this, WindowActivity.class));
+  }
+
 }
