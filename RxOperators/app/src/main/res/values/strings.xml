@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">RxOperators</string>
-    <string name="map_operator">Map operator</string>
-    <string name="flatmap_operator">Flatmap operator</string>
     <string name="combinational_operator">Combinational</string>
     <string name="filtering_operators">Filtering</string>
     <string name="mathematical_operators">Mathematical</string>
     <string name="transformational_operators">Transformational</string>
     <string name="types_of_operators">Types of Operators</string>
-    <string name="buffer_operator">Buffer Operator</string>
     <string name="see_logs">See Android monitor info logs</string>
-    <string name="window_operator">Window Operator</string>
+
+    <!--Transformation Operators-->
+    <string name="buffer_operator">Buffer</string>
+    <string name="map_operator">Map</string>
+    <string name="flatmap_operator">Flatmap</string>
+    <string name="window_operator">Window</string>
+    <!--Combination Operators-->
+    <string name="merge_operator">Merge</string>
+    <string name="concat_operator">Concat</string>
+    <string name="zip_operator">Zip</string>
+    <string name="combine_latest_operator">CombineLatest</string>
+    <string name="race_operator">Race</string>
 </resources>
