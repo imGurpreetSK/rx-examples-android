@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.gurpreetsk.rxoperators.R;
-import me.gurpreetsk.rxoperators.ui.combination.CombinationalOperatorsActivity;
+import me.gurpreetsk.rxoperators.ui.combination.CombinationOperatorsActivity;
 import me.gurpreetsk.rxoperators.ui.filtering.FilteringOperatorsActivity;
 import me.gurpreetsk.rxoperators.ui.mathematical.MathematicalOperatorsActivity;
 import me.gurpreetsk.rxoperators.ui.transformation.TransformationOperatorsActivity;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
   @OnClick(R.id.button_combinational)
   public void openCombinationalActivity() {
-    startActivity(new Intent(MainActivity.this, CombinationalOperatorsActivity.class));
+    startActivity(new Intent(MainActivity.this, CombinationOperatorsActivity.class));
   }
 
   @OnClick(R.id.button_filtering)

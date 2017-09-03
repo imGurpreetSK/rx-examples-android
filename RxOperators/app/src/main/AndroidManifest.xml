@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".ui.transformation.TransformationOperatorsActivity">
         </activity>
-        <activity android:name=".ui.combination.CombinationalOperatorsActivity">
+        <activity android:name=".ui.combination.CombinationOperatorsActivity">
         </activity>
         <activity android:name=".ui.filtering.FilteringOperatorsActivity">
         </activity>

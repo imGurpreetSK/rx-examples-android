@@ -5,9 +5,9 @@ import android.os.Bundle;
 
 import me.gurpreetsk.rxoperators.R;
 
-public class CombinationalOperatorsActivity extends AppCompatActivity {
+public class CombinationOperatorsActivity extends AppCompatActivity {
 
-  private static final String TAG = CombinationalOperatorsActivity.class.getSimpleName();
+  private static final String TAG = CombinationOperatorsActivity.class.getSimpleName();
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

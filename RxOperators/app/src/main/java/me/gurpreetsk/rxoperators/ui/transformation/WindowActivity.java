@@ -34,6 +34,7 @@ public class WindowActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_window);
     ButterKnife.bind(this);
+    setTitle(TAG);
 
     Observable.interval(1, TimeUnit.SECONDS).take(10)
         .subscribeOn(Schedulers.io())
