@@ -1,5 +1,6 @@
 package me.gurpreetsk.rxoperators.ui.combination;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -21,7 +22,7 @@ public class CombinationOperatorsActivity extends AppCompatActivity {
 
   @OnClick(R.id.button_merge)
   public void openMergeActivity() {
-
+    startActivity(new Intent(CombinationOperatorsActivity.this, MergeActivity.class));
   }
 
   @OnClick(R.id.button_concat)
