@@ -37,7 +37,7 @@ public class MergeActivity extends AppCompatActivity {
         .subscribe(new Consumer<String>() {
           @Override
           public void accept(String s) throws Exception {
-            names.append(s);
+            names.append(s).append("\n");
           }
         });
     textviewMerge.setText(names.toString());

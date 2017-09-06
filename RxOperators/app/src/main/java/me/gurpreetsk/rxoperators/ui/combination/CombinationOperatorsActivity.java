@@ -27,7 +27,7 @@ public class CombinationOperatorsActivity extends AppCompatActivity {
 
   @OnClick(R.id.button_concat)
   public void openConcatActivity() {
-
+    startActivity(new Intent(CombinationOperatorsActivity.this, ConcatActivity.class));
   }
 
   @OnClick(R.id.button_zip)
