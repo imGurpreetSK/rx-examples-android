@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".ui.combination.MergeActivity">
         </activity>
+        <activity android:name=".ui.combination.ConcatActivity">
+        </activity>
     </application>
 
 </manifest>
