@@ -32,7 +32,7 @@ public class CombinationOperatorsActivity extends AppCompatActivity {
 
   @OnClick(R.id.button_zip)
   public void openZipActivity() {
-
+    startActivity(new Intent(CombinationOperatorsActivity.this, ZipActivity.class));
   }
 
   @OnClick(R.id.button_combine_latest)

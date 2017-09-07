@@ -38,6 +38,8 @@
         </activity>
         <activity android:name=".ui.combination.ConcatActivity">
         </activity>
+        <activity android:name=".ui.combination.ZipActivity">
+        </activity>
     </application>
 
 </manifest>
