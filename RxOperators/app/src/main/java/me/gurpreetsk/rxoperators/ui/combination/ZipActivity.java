@@ -34,6 +34,7 @@ public class ZipActivity extends AppCompatActivity {
   }
 
   private void doStuff() {
+    StringBuilder builder = new StringBuilder();
     Observable.zip(getBoyNames(), getRollNumber(), new BiFunction<String, Integer, String>() {
       @Override
       public String apply(@NonNull String s, @NonNull Integer integer) throws Exception {
@@ -48,7 +49,7 @@ public class ZipActivity extends AppCompatActivity {
 
           @Override
           public void onNext(@NonNull String s) {
-
+            builder.append(s).append("\n");
           }
 
           @Override
@@ -58,7 +59,7 @@ public class ZipActivity extends AppCompatActivity {
 
           @Override
           public void onComplete() {
-
+            textviewZip.setText(builder.toString());
           }
         });
   }

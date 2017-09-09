@@ -37,7 +37,7 @@ public class CombinationOperatorsActivity extends AppCompatActivity {
 
   @OnClick(R.id.button_combine_latest)
   public void openCombineLatestActivity() {
-
+    startActivity(new Intent(CombinationOperatorsActivity.this, CombineLatestActivity.class));
   }
 
   @OnClick(R.id.button_race)

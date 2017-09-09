@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".ui.combination.ZipActivity">
         </activity>
+        <activity android:name=".ui.combination.CombineLatestActivity">
+        </activity>
     </application>
 
 </manifest>
