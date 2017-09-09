@@ -3,6 +3,7 @@ package me.gurpreetsk.rxoperators.rest;
 import io.reactivex.Observable;
 import me.gurpreetsk.rxoperators.model.github.GithubResults;
 import me.gurpreetsk.rxoperators.model.github.GithubUser;
+import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -19,5 +20,11 @@ public interface ApiInterface {
 
   @GET("/users/{username}")
   Observable<GithubUser> getUserInfo(@Path("username") String username);
+
+  @GET("/search/repositories")
+  Call<GithubResults> callGithubRepos(@Query("q") String query);
+
+  @GET("/users/{username}")
+  Call<GithubUser> callUserInfo(@Path("username") String username);
 
 }

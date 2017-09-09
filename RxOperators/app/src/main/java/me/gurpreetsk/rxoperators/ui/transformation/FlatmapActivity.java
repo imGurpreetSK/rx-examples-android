@@ -18,11 +18,13 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import me.gurpreetsk.rxoperators.R;
 import me.gurpreetsk.rxoperators.model.github.GithubResults;
-import me.gurpreetsk.rxoperators.model.github.Project;
 import me.gurpreetsk.rxoperators.model.github.GithubUser;
+import me.gurpreetsk.rxoperators.model.github.Project;
 import me.gurpreetsk.rxoperators.rest.ApiClient;
 import me.gurpreetsk.rxoperators.rest.ApiInterface;
 import me.gurpreetsk.rxoperators.util.SeeLink;
+import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.Response;
 
 public class FlatmapActivity extends AppCompatActivity {
@@ -76,10 +78,10 @@ public class FlatmapActivity extends AppCompatActivity {
             return apiService.getUserInfo(project.getOwner().getLogin());
           }
         })
-        .observeOn(AndroidSchedulers.mainThread())
         //take only first 10 users
         .take(10)
         .retry(5)
+        .observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Observer<GithubUser>() {
           Disposable d;
 
@@ -108,13 +110,38 @@ public class FlatmapActivity extends AppCompatActivity {
         });
   }
 
-  @Override
-  protected void onStop() {
-    super.onStop();
-    // dispose off the used resources
-//    if (!disposable.isDisposed())
-//      disposable.dispose();
-  }
+  public void callRetrofitNormally() {
 
+    apiService.callGithubRepos("rxjava").enqueue(new Callback<GithubResults>() {
+      @Override
+      public void onResponse(Call<GithubResults> call, Response<GithubResults> response) {
+        if (response.code() == 200) {
+          for (Project project : response.body().getItems()) {
+            apiService.callUserInfo(project.getOwner().getLogin()).enqueue(new Callback<GithubUser>() {
+              @Override
+              public void onResponse(Call<GithubUser> call, Response<GithubUser> response) {
+                if (response.code() == 200) {
+                  Log.i(TAG, "onResponse: " + response.body().getName());
+                }
+              }
+
+              @Override
+              public void onFailure(Call<GithubUser> call, Throwable t) {
+                Log.e(TAG, "onFailure: ", t);
+              }
+            });
+          }
+        }
+      }
+
+      @Override
+      public void onFailure(Call<GithubResults> call, Throwable t) {
+        Log.e(TAG, "onFailure: ", t);
+      }
+    });
+    // how'll you successfully retry? repeat? handle errors? take only n items?
+    // save yourself from callback hell?
+    // if its something like file handling(no retrofit required), how'll you manage UI updates?
+  }
 
 }
