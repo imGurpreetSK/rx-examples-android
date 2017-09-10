@@ -1,15 +1,75 @@
 package me.gurpreetsk.rxoperators.ui.combination;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.BiFunction;
 import me.gurpreetsk.rxoperators.R;
 
 public class CombineLatestActivity extends AppCompatActivity {
+
+  @BindView(R.id.textview_combine_latest)
+  TextView textviewCombine;
+
+  private static final String TAG = CombineLatestActivity.class.getSimpleName();
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_combine_latest);
+    ButterKnife.bind(this);
+    setTitle(TAG);
+
+    doStuff();
   }
+
+  private void doStuff() {
+    StringBuilder builder = new StringBuilder();
+    //combine two observables
+    //notice the sizes of Observables and the output
+    Observable.combineLatest(getBoyNames(), getRollNumber(), new BiFunction<String, Integer, String>() {
+      @Override
+      public String apply(@NonNull String s, @NonNull Integer integer) throws Exception {
+        return s  + integer;
+      }
+    }).observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Observer<String>() {
+          @Override
+          public void onSubscribe(@NonNull Disposable d) {
+
+          }
+
+          @Override
+          public void onNext(@NonNull String s) {
+            builder.append(s).append("\n");
+          }
+
+          @Override
+          public void onError(@NonNull Throwable e) {
+
+          }
+
+          @Override
+          public void onComplete() {
+            textviewCombine.setText(builder.toString());
+          }
+        });
+  }
+
+  Observable<String> getBoyNames() {
+    return Observable.fromArray("Manish", "David", "Rohan", "Gurpreet");
+  }
+
+  Observable<Integer> getRollNumber() {
+    return Observable.fromArray(12, 15, 63, 15, 54, 92);
+  }
+
 }

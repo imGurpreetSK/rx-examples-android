@@ -35,10 +35,12 @@ public class ZipActivity extends AppCompatActivity {
 
   private void doStuff() {
     StringBuilder builder = new StringBuilder();
+    //combine two observables
+    //notice the sizes of Observables and the output
     Observable.zip(getBoyNames(), getRollNumber(), new BiFunction<String, Integer, String>() {
       @Override
       public String apply(@NonNull String s, @NonNull Integer integer) throws Exception {
-        return s + integer;
+        return s +" -> "+ integer;
       }
     }).observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Observer<String>() {
@@ -69,7 +71,7 @@ public class ZipActivity extends AppCompatActivity {
   }
 
   Observable<Integer> getRollNumber() {
-    return Observable.fromArray(12, 15, 63, 13, 54, 92);
+    return Observable.fromArray(12, 15, 63, 15, 54, 92);
   }
 
 }
