@@ -38,7 +38,7 @@ public class CombineLatestActivity extends AppCompatActivity {
     Observable.combineLatest(getBoyNames(), getRollNumber(), new BiFunction<String, Integer, String>() {
       @Override
       public String apply(@NonNull String s, @NonNull Integer integer) throws Exception {
-        return s  + integer;
+        return s + " -> " + integer;
       }
     }).observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Observer<String>() {
