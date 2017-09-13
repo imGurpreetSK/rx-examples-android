@@ -2,6 +2,7 @@ package me.gurpreetsk.rxoperators.ui.combination;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -42,9 +43,11 @@ public class CombineLatestActivity extends AppCompatActivity {
       }
     }).observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Observer<String>() {
+          Disposable d;
+
           @Override
           public void onSubscribe(@NonNull Disposable d) {
-
+            this.d = d;
           }
 
           @Override
@@ -54,12 +57,16 @@ public class CombineLatestActivity extends AppCompatActivity {
 
           @Override
           public void onError(@NonNull Throwable e) {
-
+            Log.e(TAG, "onError: ", e);
+            if (!d.isDisposed())
+              d.isDisposed();
           }
 
           @Override
           public void onComplete() {
             textviewCombine.setText(builder.toString());
+            if (!d.isDisposed())
+              d.isDisposed();
           }
         });
   }
