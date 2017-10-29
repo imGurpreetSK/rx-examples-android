@@ -12,7 +12,6 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.BiFunction;
 import me.gurpreetsk.rxoperators.R;
 
 public class CombineLatestActivity extends AppCompatActivity {
@@ -36,12 +35,10 @@ public class CombineLatestActivity extends AppCompatActivity {
     StringBuilder builder = new StringBuilder();
     //combine two observables
     //notice the sizes of Observables and the output
-    Observable.combineLatest(getBoyNames(), getRollNumber(), new BiFunction<String, Integer, String>() {
-      @Override
-      public String apply(@NonNull String s, @NonNull Integer integer) throws Exception {
-        return s + " -> " + integer;
-      }
-    }).observeOn(AndroidSchedulers.mainThread())
+    Observable.combineLatest(
+        getBoyNames(), getRollNumber(),
+        (s, integer) -> s + " -> " + integer)
+        .observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Observer<String>() {
           Disposable d;
 
