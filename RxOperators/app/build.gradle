@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion compileSdkVer
@@ -58,4 +59,8 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+
+kapt {
+    generateStubs = true
 }

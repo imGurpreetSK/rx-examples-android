@@ -18,4 +18,11 @@
     <string name="zip_operator">Zip</string>
     <string name="combine_latest_operator">CombineLatest</string>
     <string name="race_operator">Race</string>
+    <string name="distinct_operator">Distinct</string>
+    <string name="distinct_until_changed_operator">Distinct until changed</string>
+    <string name="debounce_operator">Debounce</string>
+    <string name="take_until_operator">Take until</string>
+    <string name="throttle_operator">Throttle</string>
+    <string name="first_operator">First</string>
+    <string name="filter_operator">Filter</string>
 </resources>
