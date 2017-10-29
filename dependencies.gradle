@@ -1,12 +1,12 @@
 ext {
-    androidPluginVer = "2.3.3"
-    compileSdkVer = 25
-    buildToolsVer = "25.0.3"
+    androidPluginVer = "3.0.0"
+    compileSdkVer = 26
+    buildToolsVer = "26.0.2"
 
     minSdkVer = 15
-    targetSdkVer = 25
+    targetSdkVer = 26
 
-    supportLibVer = "25.3.1"
+    supportLibVer = "27.0.0"
 
     junitVer = "4.12"
     espressoVer = "2.2.2"
@@ -24,4 +24,5 @@ ext {
 
     rxAndroidVer = "2.0.1"
     rxJavaVer = "2.1.2"
+    rxKotlinVer = "2.1.0"
 }

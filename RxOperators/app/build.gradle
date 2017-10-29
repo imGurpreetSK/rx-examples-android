@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion compileSdkVer
@@ -33,10 +33,12 @@ dependencies {
 
     compile "com.android.support:appcompat-v7:$supportLibVer"
     compile "com.android.support:recyclerview-v7:$supportLibVer"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     //rx
     compile "io.reactivex.rxjava2:rxandroid:$rxAndroidVer"
     compile "io.reactivex.rxjava2:rxjava:$rxJavaVer"
+    compile "io.reactivex.rxjava2:rxkotlin:$rxKotlinVer"
     compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitCallAdapterVer"
 
     //retrofit
@@ -49,6 +51,5 @@ dependencies {
     compile "com.jakewharton:butterknife:$butterknifeVer"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
 
-//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
