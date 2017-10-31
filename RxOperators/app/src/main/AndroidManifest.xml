@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".ui.combination.CombineLatestActivity">
         </activity>
+        <activity android:name=".ui.filtering.DistinctOperatorActivity">
+        </activity>
     </application>
 
 </manifest>
