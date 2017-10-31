@@ -15,8 +15,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-        test.java.srcDirs += 'src/test/kotlin'
+        main.java.srcDirs        += 'src/main/kotlin'
+        test.java.srcDirs        += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
     buildTypes {
@@ -59,6 +59,7 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.1.51"
 }
 
 kapt {
